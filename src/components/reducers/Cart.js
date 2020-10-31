@@ -46,7 +46,7 @@ const myReducer = (state = initialState, action) => {
 
             localStorage.setItem('CART', JSON.stringify(state));
             return [...state];
-
+            
         case types.DELETE_PRODUCT_ITEM:
             let productID = action.cart.product.id;
             index = findID(state, productID);

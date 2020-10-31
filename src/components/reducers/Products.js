@@ -31,6 +31,7 @@ const myReducer = (state = initialState, action) => {
     switch(action.type){
         case types.PRODUCTS:
             return [...state];
+
         default:
             return state;
     }

@@ -21,21 +21,21 @@ class CartItem extends Component {
                 <td className="center-on-small-only">
                     <span className="qty">{cart.quantity}</span>
                     <div className="btn-group radio-group" data-toggle="buttons">
-                        <label 
+                        <label
                             className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
                             onClick={() => this.onUpdateProductInCart(cart.product, cart.quantity - 1)}
                         >
-                            <a 
+                            <a
                                 href
                             >
                                 —
                             </a>
                         </label>
-                        <label 
-                            className="btn btn-sm btn-primary btn-rounded waves-effect waves-light" 
+                        <label
+                            className="btn btn-sm btn-primary btn-rounded waves-effect waves-light"
                             onClick={() => this.onUpdateProductInCart(cart.product, cart.quantity + 1)}
                         >
-                            <a 
+                            <a
                                 href
                             >
                                 +
@@ -45,13 +45,13 @@ class CartItem extends Component {
                 </td>
                 <td>{this.onshowSubTotal(cart.product.price, cart.quantity)}$</td>
                 <td>
-                    <button type="button" 
-                            className="btn btn-sm btn-primary waves-effect waves-light" 
-                            data-toggle="tooltip" 
-                            data-placement="top"
-                            title="" 
-                            data-original-title="Remove item"
-                            onClick={() => this.Delete(cart)}
+                    <button type="button"
+                        className="btn btn-sm btn-primary waves-effect waves-light"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title=""
+                        data-original-title="Remove item"
+                        onClick={() => this.Delete(cart)}
                     >
                         X
                     </button>
@@ -69,7 +69,7 @@ class CartItem extends Component {
     }
 
     onUpdateProductInCart = (product, quantity) => {
-        if(quantity > 0){
+        if (quantity > 0) {
             this.props.onUpdateProductInCart(product, quantity);
             this.props.onChangeMessage(message.MESSAGE_UPDATE_CART)
         }
